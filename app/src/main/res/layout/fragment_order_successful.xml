@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="18dp"
+    tools:context=".OrderSuccessfulFragment">
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/baseline_check_circle_24"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your  Order Is SuccessFully Done"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeBtn"
+        android:text="Home"
+        android:textColor="@color/teal_200"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_gravity="end"
+        android:layout_marginTop="15dp"/>
+
+
+
+</LinearLayout>

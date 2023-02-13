@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ecommerceforuser.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.example.ecommerceforuser.ProductListFragment"
+        android:label="fragment_product_list"
+        tools:layout="@layout/fragment_product_list" >
+        <action
+            android:id="@+id/action_productListFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.ecommerceforuser.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/userOrderListFragment"
+        android:name="com.example.ecommerceforuser.UserOrderListFragment"
+        android:label="fragment_user_order_list"
+        tools:layout="@layout/fragment_user_order_list" />
+    <fragment
+        android:id="@+id/cartListFragment"
+        android:name="com.example.ecommerceforuser.CartListFragment"
+        android:label="fragment_cart_list"
+        tools:layout="@layout/fragment_cart_list" >
+        <action
+            android:id="@+id/action_cartListFragment_to_checkOutFragment"
+            app:destination="@id/checkOutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkOutFragment"
+        android:name="com.example.ecommerceforuser.CheckOutFragment"
+        android:label="fragment_check_out"
+        tools:layout="@layout/fragment_check_out" >
+        <action
+            android:id="@+id/action_checkOutFragment_to_orderConfirmationFragment"
+            app:destination="@id/orderConfirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderConfirmationFragment"
+        android:name="com.example.ecommerceforuser.OrderConfirmationFragment"
+        android:label="fragment_order_confirmation"
+        tools:layout="@layout/fragment_order_confirmation" >
+        <action
+            android:id="@+id/action_orderConfirmationFragment_to_orderSuccessfulFragment"
+            app:destination="@id/orderSuccessfulFragment"
+            app:popUpTo="@id/productListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSuccessfulFragment"
+        android:name="com.example.ecommerceforuser.OrderSuccessfulFragment"
+        android:label="fragment_order_successful"
+        tools:layout="@layout/fragment_order_successful" >
+        <action
+            android:id="@+id/action_orderSuccessfulFragment_to_productListFragment"
+            app:destination="@id/productListFragment"
+            app:popUpTo="@id/productListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

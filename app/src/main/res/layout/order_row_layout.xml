@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="order"
+            type="com.example.ecommerceforuser.models.Order" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="5dp"
+        android:layout_margin="4dp"
+        android:elevation="1dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/orderDateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="06/02/2023  11:50 am"
+                android:textColor="@color/teal_200"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:setDate="@{order.orderDate}"/>
+            <TextView
+                android:id="@+id/orderTotalTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="BDT 200"
+                android:textColor="@color/teal_200"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:text="@{`BDT`+order.grandtotal}"/>
+            <TextView
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:background="@color/pink"
+                android:id="@+id/orderStatusTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Order Status :Pending"
+                android:textColor="@color/teal_200"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_below="@id/orderDateTv"
+                android:text="@{`Order Status:`+order.orderStatus}"/>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

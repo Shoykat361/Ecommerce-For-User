@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="My Cart"
+        android:id="@+id/cartListFragment"
+        android:icon="@drawable/baseline_shopping_cart_24"
+        app:showAsAction="ifRoom"/>
+
+    <item android:title="LogOuT"
+        android:id="@+id/Item_LogOut"/>
+
+</menu>

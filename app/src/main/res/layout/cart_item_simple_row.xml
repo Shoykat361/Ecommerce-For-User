@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.ecommerceforuser.models.CartItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:cardElevation="6dp"
+        app:contentPadding="4dp"
+        app:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cartRowConfirmProductNameTV"
+                tools:text="Product Name"
+                android:text="@{item.productName}"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cartRowConfirmProductPriceTV"
+                tools:text="1 x 200"
+                android:text="@{item.quantity+`x`+item.price}"
+                android:textColor="@color/black"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

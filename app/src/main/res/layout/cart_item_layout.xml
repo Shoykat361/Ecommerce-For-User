@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.ecommerceforuser.models.CartItem" />
+        <variable
+            name="price"
+            type="Double" />
+        <variable
+            name="quantity"
+            type="Integer" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="3dp"
+        app:contentPadding="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/cartItemProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Product Name"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_marginBottom="3dp"
+                android:text="@{item.productName}"/>
+            <ImageView
+                android:id="@+id/cartminusImgView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_iminus_24"
+                android:layout_below="@id/cartItemProductName"/>
+            <TextView
+                android:id="@+id/cartItemProductQty"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="1"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_toEndOf="@id/cartminusImgView"
+                android:text="@{``+quantity}"
+                android:layout_below="@id/cartItemProductName"/>
+            <ImageView
+                android:id="@+id/cartplusImgView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_add_box_24"
+                android:layout_toEndOf="@id/cartItemProductQty"
+                android:layout_below="@id/cartItemProductName"/>
+            <TextView
+                android:id="@+id/cartItemProductprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="BDT 399"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@{`BDT`+price}"
+                android:layout_alignParentEnd="true"/>
+
+            <ImageView
+                android:id="@+id/cartdeleteImgView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cartItemProductName"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="151dp"
+                android:layout_marginTop="-1dp"
+                android:layout_marginEnd="-140dp"
+                android:layout_toEndOf="@id/cartItemProductQty"
+                android:padding="8dp"
+                android:src="@drawable/baseline_delete_24" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

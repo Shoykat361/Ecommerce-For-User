@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        tools:context=".LoginFragment">
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/emailInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textAlignment="center"
+            android:inputType="textEmailAddress"
+            android:hint="Enter email" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:id="@+id/passwordInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="password" />
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/loginBtn"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="New User?"
+                android:textSize="20sp"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:text="Register"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"
+                android:textAlignment="center"
+                android:id="@+id/registerBtn"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/errorMsg"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+</layout>
